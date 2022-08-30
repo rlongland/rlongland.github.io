@@ -1,6 +1,6 @@
 # Longland group website, 2022 version!
 
-This is the group website rebuilt (pretty much from scratch) using jekyll and hosted on Github Pages. The website can be found at rlongland.github.io  
+This is the group website rebuilt (pretty much from scratch) using jekyll and hosted on Github Pages. The website can be found at <rlongland.github.io>
 
 ## To make a new site
 
@@ -22,6 +22,11 @@ This is the group website rebuilt (pretty much from scratch) using jekyll and ho
 * Stick some front matter in (copy and edit an old post)
 * As long as `jekyll serve` is running, the post will appear automatically!
 
+## To deploy
+
+* Merge any changes with `gh-pages` branch
+* Push to origin
+* Wait some period of time...
 
 ## Thanks
 
