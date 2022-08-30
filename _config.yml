@@ -1,0 +1,108 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+#
+# If you need help with YAML syntax, here are some quick references for you: 
+# https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
+# https://learnxinyminutes.com/docs/yaml/
+#
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+
+title: "Experimental Nuclear Astrophysics"
+subtitle: "Longland Group"
+masthead_title: "Nuclear Astrophysics"
+email: richard_longland@ncsu.edu
+name: "Richard Longland"
+description: >- # this means to ignore newlines until "baseurl:"
+  Web page for Longland nuclear astrophysics group
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+twitter_username: 
+github_username:  
+
+teaser: "/assets/images/teaser.png"
+logo: #"/assets/images/FENRISLogo-notext-icon.png"
+
+# The following adjust the accents for your site. If you would like to further edit colors, fonts, font sizes, etc.
+# you may do so in _sass/variables.scss
+highlight-color: '#CC0000'
+lowlight-color: '#000'
+
+search: true
+
+author:
+  name     : "Dr. Richard Longland"
+  avatar   : "/assets/images/Richard-Square.JPG"
+  bio      : "Associate Professor of Physics."
+  location : "North Carolina, USA"
+#  github: rlongland #username
+#  orcid: 0000-0001-7731-580X # ID Number (ex. 0000-0000-0000-0000)
+#  email: richard_longland@ncsu.edu
+  links:
+    - label: "richard_longland@ncsu.edu"
+      icon: "fas fa-at"
+      url: "mailto:richard_longland@ncsu.edu"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/rlongland"
+    - label: "ORCiD"
+      icon: "fab fa-orcid"
+      url: "https://orcid.org/0000-0001-7731-580X"
+
+include: ["_pages"]
+  
+# Build settings
+theme: minimal-mistakes-jekyll
+plugins:
+  - jekyll-feed
+
+
+collections:
+  team:
+    output: true
+    permalink: /:collection/:path
+
+defaults:
+  # _posts
+  - scope:
+      path: ""
+      type: posts
+    values:
+      show_date: true
+  # _team
+  - scope:
+      path: ""
+      type: team
+    values:
+      layout: member
+      author_profile: false
+      
+# Exclude from processing.
+# The following items will not be processed, by default.
+# Any item listed under the `exclude:` key here will be automatically added to
+# the internal "default list".
+#
+# Excluded items can be processed by explicitly listing the directories or
+# their entries' file path in the `include:` list.
+#
+# exclude:
+#   - .sass-cache/
+#   - .jekyll-cache/
+#   - gemfiles/
+#   - Gemfile
+#   - Gemfile.lock
+#   - node_modules/
+#   - vendor/bundle/
+#   - vendor/cache/
+#   - vendor/gems/
+#   - vendor/ruby/
