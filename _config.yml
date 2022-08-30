@@ -26,7 +26,7 @@ name: "Richard Longland"
 description: >- # this means to ignore newlines until "baseurl:"
   Web page for Longland nuclear astrophysics group
 baseurl: "" # the subpath of your site, e.g. /blog
-url: https://rlongland.github.io # the base hostname & protocol for your site, e.g. http://example.com
+url:  # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: 
 github_username: rlongland 
 
@@ -86,6 +86,9 @@ defaults:
     values:
       layout: member
       author_profile: false
+
+
+encoding: utf-8
       
 # Exclude from processing.
 # The following items will not be processed, by default.
