@@ -2,6 +2,7 @@
 layout: posts
 title: "News"
 permalink: /news/
-author_profile: true
+author_profile: false
+entries_layout: grid
 ---
 

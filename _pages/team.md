@@ -3,6 +3,8 @@ title: Team
 layout: archive
 permalink: /team/
 collection: team
+header:
+    image: /assets/images/Students_2017-cropped.jpg
 classes: narrow
 ---
 
