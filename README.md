@@ -1,10 +1,26 @@
 # Longland group website, 2022 version!
 
-This is the group website rebuilt (pretty much from scratch) using jekyll and hosted on Github Pages. The website can be found at !(rlongland.github.io)  
+This is the group website rebuilt (pretty much from scratch) using jekyll and hosted on Github Pages. The website can be found at rlongland.github.io  
+
+## To make a new site
+
+* Make a jekyll site: `jekyll new mysite`
+* `cd mysite`
+* Launch it locally: `bundle exec jekyll serve`
+* Webpage is available at `localhost:4000`
 
 ## To Test
 
+* Develop on any branch other than `gh-pages`
+* run `bundle exec jekyll serve`
+* Open web browser to `localhost:4000`
+* Any changes to files (mostly?) are already applied, so mash F5
 
+## To make a new post
+
+* Make a new file in `_posts` called `2022-08-25-post-name.md`
+* Stick some front matter in (copy and edit an old post)
+* As long as `jekyll serve` is running, the post will appear automatically!
 
 
 ## Thanks
