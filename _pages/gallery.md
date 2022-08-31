@@ -43,6 +43,4 @@ gallery:
    - image_path: /assets/images/gallery/p1040095-small.jpg
 ---
 
-Probably needs some captions
-
 {% include gallery caption="A collection of images from our group!" %}
