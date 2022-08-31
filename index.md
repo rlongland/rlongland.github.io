@@ -13,10 +13,10 @@ intro:
    - excerpt: "The Longland research group is committed to diversity and equality. A diverse set of experiences across race, gender, age, religion, and identity helps us unlock the mysteries of the universe in new and unique ways!"
 feature_row:
   - image_path: assets/images/EngeView1-feature.png
-    alt: "placeholder image 1"
+    alt: "Enge CAD Drawing"
     title: "Research"
     excerpt: "An overview of our research and projects "
-    url: "/about/"
+    url: "/research/"
     btn_label: "Read More"
     btn_class: "btn--primary"
   - image_path: assets/images/Library-feature.jpg
