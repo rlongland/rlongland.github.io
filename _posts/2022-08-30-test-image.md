@@ -5,6 +5,7 @@ date:   2022-08-30 13:59:12 +0100
 categories: jekyll update
 header:
     image: /assets/images/Students_2017-cropped.jpg
+    teaser: /assets/images/Students_2017-cropped.jpg
 ---
 You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
 
