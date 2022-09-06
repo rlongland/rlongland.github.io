@@ -36,3 +36,11 @@ classes: wide
 {% include feature_row id="intro" type="center" %}
 
 {% include feature_row %}
+
+# Recent News 
+
+See [here](/news/) for more!
+
+{% for post in site.posts limit:3 %}
+  {% include archive-single.html %}
+{% endfor %}
