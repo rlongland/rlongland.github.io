@@ -6,7 +6,7 @@ handle:
 email: ksong6@ncsu.edu
 scholar: 
 calendar:
-image: /assets/images/team/bio-photo.jpg
+image: /assets/images/team/kaixin-song.jpg
 github: 
 cv:
 sidekick: false
