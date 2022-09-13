@@ -23,7 +23,7 @@ feature_row:
     alt: "library image"
     title: "Publications"
     excerpt: "A list of our publications"
-    url: "https://ui.adsabs.harvard.edu/search/filter_author_facet_hier_fq_author=AND&filter_author_facet_hier_fq_author=author_facet_hier%3A%220%2FLongland%2C%20R%22&fq=%7B!type%3Daqp%20v%3D%24fq_author%7D&fq=%7B!type%3Daqp%20v%3D%24fq_aff%7D&fq_aff=(aff_facet_hier%3A%220%2FNCSU%22%20OR%20aff_facet_hier%3A%220%2FUNCCH%22%20OR%20aff_facet_hier%3A%220%2FUPC%22)&fq_author=(author_facet_hier%3A%220%2FLongland%2C%20R%22)&q=Longland&sort=date%20desc%2C%20bibcode%20desc&p_=0"
+    url: /publications/ 
     btn_label: "Read More"
     btn_class: "btn--primary"
   - image_path: assets/images/Students_2017-feature.jpg
