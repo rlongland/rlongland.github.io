@@ -8,13 +8,13 @@ collection: publications
 classes: wide
 ---
 
-For a full list of our publications,  
-[click here](https://ui.adsabs.harvard.edu/search/filter_author_facet_hier_fq_author=AND&filter_author_facet_hier_fq_author=author_facet_hier%3A%220%2FLongland%2C%20R%22&fq=%7B!type%3Daqp%20v%3D%24fq_author%7D&fq=%7B!type%3Daqp%20v%3D%24fq_aff%7D&fq_aff=(aff_facet_hier%3A%220%2FNCSU%22%20OR%20aff_facet_hier%3A%220%2FUNCCH%22%20OR%20aff_facet_hier%3A%220%2FUPC%22)&fq_author=(author_facet_hier%3A%220%2FLongland%2C%20R%22)&q=Longland&sort=date%20desc%2C%20bibcode%20desc&p_=0){:.btn .btn--primary}
+Below you will find a list of highlighted publications that demonstrate the broad range of our research program. They are not intended to be an exhaustive list, or even a list of the *best* papers.  
+[For a full list of our publications, click here](https://ui.adsabs.harvard.edu/search/filter_author_facet_hier_fq_author=AND&filter_author_facet_hier_fq_author=author_facet_hier%3A%220%2FLongland%2C%20R%22&fq=%7B!type%3Daqp%20v%3D%24fq_author%7D&fq=%7B!type%3Daqp%20v%3D%24fq_aff%7D&fq_aff=(aff_facet_hier%3A%220%2FNCSU%22%20OR%20aff_facet_hier%3A%220%2FUNCCH%22%20OR%20aff_facet_hier%3A%220%2FUPC%22)&fq_author=(author_facet_hier%3A%220%2FLongland%2C%20R%22)&q=Longland&sort=date%20desc%2C%20bibcode%20desc&p_=0){:.btn .btn--primary}
 
-Note that this page is still under construction  
+
+<!-- <h2> Highlighted Papers  </h2> -->
+Note that this list is still under construction  
 {: .notice--danger} 
-
-
 {% for post in site.publications %}
   {% include archive-single.html %}
 {% endfor %}
