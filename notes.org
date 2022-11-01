@@ -1,0 +1,43 @@
+* Notes for jekyll
+** Normal jekyll 
+   - Following instructions at https://jekyllrb.com/docs/
+   - ~sudo apt install ruby-dev~
+   - ~sudo gem install jekyll bundler~
+   - Made the following directory: ~/home/longland/project/Website/Personal/jekyll~
+   - ~jekyll new myblog~
+   - ~cd myblog~
+   - ~bundle exec jekyll serve~
+   - The webpage is available at localhost:4000
+** To get jekyll-org working
+   - Edit ~Gemfile~ to add
+     ~gem 'jekyll-org', '>= 1.1.0'~
+   - Install the gems
+     ~bundle install~
+   - Edit ~_config.yml~ 
+     #+begin_src sh
+       plugins:
+         - jekyll-org
+     #+end_src
+   - Generate site
+     ~bundle exec jekyll serve~
+   - Make a new post
+     - Make a new file in ~_posts/~ called ~2022-08-25-org-post.org~
+     - Upon saving the org file, the site is updated automatically as
+       long as ~jekyll serve~ is running
+** Try a different method using straight org
+   - ~mkdir orgtest~
+   - ~jekyll new .~
+   - ~jekyll serve~
+   - Now running on http://localhost:4000/
+   - ~mkdir _org && cd _org~
+
+** Themes I like
+   - Skinny Bones https://jamstackthemes.dev/theme/jekyll-theme-skinny-bones/
+     Sleek
+   - Jekyll Serif https://jamstackthemes.dev/theme/jekyll-serif/
+     For business?
+   - Minimal mistakes https://jamstackthemes.dev/theme/minimal-mistakes/
+     Sleak-looking, picture heavy
+   - Dumbarton https://jamstackthemes.dev/theme/jekyll-dumbarton/
+     For academics
+** 
