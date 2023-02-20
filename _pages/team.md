@@ -4,7 +4,7 @@ layout: archive
 permalink: /team/
 collection: team
 header:
-    image: /assets/images/Students_2017-cropped.jpg
+    image: /assets/images/Students_2023.jpg
 classes: narrow
 ---
 

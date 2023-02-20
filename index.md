@@ -26,7 +26,7 @@ feature_row:
     url: /publications/ 
     btn_label: "Read More"
     btn_class: "btn--primary"
-  - image_path: assets/images/Students_2017-feature.jpg
+  - image_path: assets/images/Students_2023-feature.jpg
     title: "Our Team"
     excerpt: "Click here to see who we are!"
     url: "/team/"
