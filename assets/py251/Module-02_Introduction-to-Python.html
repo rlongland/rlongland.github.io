@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Module 02 - Introduction to Python</title>
+<meta name="author" content="Dr. Longland"/>
+<meta name="description" content=""/>
+<meta name="keywords" content=""/>
+<style type="text/css">
+.underline { text-decoration: underline; }
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.css"/>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/theme/white.css" id="theme"/>
+
+<link rel="stylesheet" href="./presentation.css"/>
+
+<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+<script>
+    if( window.location.search.match( /print-pdf/gi ) ) {
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = 'https://cdn.jsdelivr.net/npm/reveal.js/css/print/pdf.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+    }
+</script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+<section id="sec-title-slide"><h1 class="title">Module 02 - Introduction to Python</h1><p class="subtitle"></p>
+<h2 class="author">Dr. Longland</h2>
+</section>
+<section>
+<section id="slide-org5f795c6">
+<h2 id="org5f795c6"><span class="section-number-2">1.</span> Types of variables</h2>
+<ul>
+<li><code>bool</code>
+Boolean: can only be 0 or 1
+<ul>
+<li>0 = no, false, zero</li>
+<li>1 = yes, true, one</li>
+
+</ul></li>
+<li><code>int</code>
+Integer: whole numbers
+<ul>
+<li>Can have different "sizes" depending on memory allocated to them</li>
+
+</ul></li>
+<li><code>str</code>
+String: an ASCII character code
+<ul>
+<li>Example: D = 68 = 01000100</li>
+
+</ul></li>
+<li><code>float</code>
+Floating point: can also be in scientific notation
+<ul>
+<li>Example: 1.56e-17</li>
+<li>Algorithms designed for <code>int</code> and <code>float</code> work differently</li>
+
+</ul></li>
+<li><code>complex</code>
+Complex Numbers: simply made of 2 floating point numbers</li>
+
+</ul>
+
+<p>
+If you're ever unsure, ask python!
+</p>
+<div class="org-src-container">
+
+<pre  class="src src-python"   ><code trim><span style="color: #8f0075;">type</span><span style="color: #000000;">(</span>variable<span style="color: #000000;">)</span>
+</code></pre>
+</div>
+</section>
+<section id="slide-orgd0b59a7">
+<h3 id="orgd0b59a7"><span class="section-number-3">1.1.</span> <code>bool</code></h3>
+<ul>
+<li>Booleans answer questions.</li>
+<li>e.g. "is <code>a</code> the same value as <code>b</code>?"</li>
+<li><code>x == y</code>: are <code>x</code> and <code>y</code> equal?</li>
+<li><code>x != y</code>: are <code>x</code> and <code>y</code> unequal?</li>
+<li><code>x &lt; y</code>: is <code>x</code> less than <code>y</code>?</li>
+<li><code>x &gt;= y</code>: is <code>x</code> greater than <i>or equal to</i> <code>y</code>?</li>
+<li>etc.</li>
+
+</ul>
+</section>
+<section id="slide-org77e2585">
+<h3 id="org77e2585"><span class="section-number-3">1.2.</span> Using <code>bool</code> to control flow through your program</h3>
+<div class="org-src-container">
+
+<pre  class="src src-python"   ><code trim><span style="color: #005e8b;">x</span> <span style="color: #000000;">=</span> 6
+<span style="color: #005e8b;">y</span> <span style="color: #000000;">=</span> 7
+<span style="color: #531ab6;">if</span> x <span style="color: #000000;">&gt;</span> y:
+    <span style="color: #8f0075;">print</span><span style="color: #000000;">(</span><span style="color: #3548cf;">"x is greater than y"</span><span style="color: #000000;">)</span>
+</code></pre>
+</div>
+<p>
+Note: this indentation is very important!
+</p>
+</section>
+<section id="slide-org4e4b856">
+<h3 id="org4e4b856"><span class="section-number-3">1.3.</span> Using <code>bool</code> to control flow through your program</h3>
+<div class="org-src-container">
+
+<pre  class="src src-python"   ><code trim><span style="color: #005e8b;">x</span> <span style="color: #000000;">=</span> 6
+<span style="color: #005e8b;">y</span> <span style="color: #000000;">=</span> 7
+<span style="color: #531ab6;">if</span> x <span style="color: #000000;">&gt;</span> y:
+    <span style="color: #8f0075;">print</span><span style="color: #000000;">(</span><span style="color: #3548cf;">"x is greater than y"</span><span style="color: #000000;">)</span>
+<span style="color: #531ab6;">else</span>:
+    <span style="color: #8f0075;">print</span><span style="color: #000000;">(</span><span style="color: #3548cf;">"x is not greater than y"</span><span style="color: #000000;">)</span>
+</code></pre>
+</div>
+<p>
+Note: this indentation is very important!
+</p>
+</section>
+<section id="slide-org351d682">
+<h3 id="org351d682"><span class="section-number-3">1.4.</span> <code>while</code> loops</h3>
+<div class="org-src-container">
+
+<pre  class="src src-python"   ><code trim><span style="color: #005e8b;">i</span> <span style="color: #000000;">=</span> 0
+<span style="color: #531ab6;">while</span> i<span style="color: #000000;">&lt;</span>5:
+    <span style="color: #8f0075;">print</span><span style="color: #000000;">(</span>i<span style="color: #000000;">)</span>
+    <span style="color: #005e8b;">i</span> <span style="color: #000000;">=</span> i <span style="color: #000000;">+</span> 1
+</code></pre>
+</div>
+<p>
+or
+</p>
+<div class="org-src-container">
+
+<pre  class="src src-python"   ><code trim><span style="color: #531ab6;">for</span> i <span style="color: #531ab6;">in</span> <span style="color: #8f0075;">range</span><span style="color: #000000;">(</span>5<span style="color: #000000;">)</span>:
+    <span style="color: #8f0075;">print</span><span style="color: #000000;">(</span>i<span style="color: #000000;">)</span>
+</code></pre>
+</div>
+<ul>
+<li><code>range</code> may behave unexpectedly.
+<ul>
+<li>Try <code>range(1,5)</code>, <code>range(1,5,2)</code></li>
+<li>print with <code>print(list(range(5)))</code></li>
+
+</ul></li>
+
+</ul>
+</section>
+</section>
+<section>
+<section id="slide-org02f6c86">
+<h2 id="org02f6c86"><span class="section-number-2">2.</span> Modules and Arrays</h2>
+<p>
+<b>Physics application: work done by pulling</b>
+</p>
+<ul>
+<li>Consider following data collected while pulling a cart in the lab</li>
+<li><p>
+What might a for/while loop look like to compute work done from 3 m to 67 m?
+</p>
+
+<div id="orgd87b9f8" class="figure">
+<p><img src="02figs/ForceVsTime.png" alt="ForceVsTime.png" align="right" width="50%" />
+</p>
+</div></li>
+
+</ul>
+</section>
+<section id="slide-org76a0abc">
+<h3 id="org76a0abc"><span class="section-number-3">2.1.</span> Modules let you import new capabilities</h3>
+<ul>
+<li>Python by itself doesn't know how to do much</li>
+<li>People have written <code>modules</code> that make it better!
+<ul>
+<li><code>numpy</code> for any numerical work</li>
+<li><code>pandas</code> for data processing</li>
+<li><code>matplotlib</code> for plotting</li>
+<li><code>random</code> for random numbers</li>
+
+</ul></li>
+<li>Importing these capabilities can be confusing at first
+<ul>
+<li><p>
+<code>import numpy</code> gives you access to <i>everything</i> in numpy
+</p>
+<div class="org-src-container">
+
+<pre  class="src src-python"   ><code trim><span style="color: #531ab6;">import</span> numpy
+<span style="color: #8f0075;">print</span><span style="color: #000000;">(</span>numpy.sqrt<span style="color: #dd22dd;">(</span>100<span style="color: #dd22dd;">)</span><span style="color: #000000;">)</span>
+</code></pre>
+</div>
+<p>
+Note that I still needed to tell python <i>where</i> <code>sqrt</code> is defined
+</p></li>
+<li><p>
+<code>from numpy import *</code> imports everything and allows you to do:
+</p>
+<div class="org-src-container">
+
+<pre  class="src src-python"   ><code trim><span style="color: #531ab6;">from</span> numpy <span style="color: #531ab6;">import</span> <span style="color: #000000;">*</span>
+<span style="color: #8f0075;">print</span><span style="color: #000000;">(</span>sqrt<span style="color: #dd22dd;">(</span>100<span style="color: #dd22dd;">)</span><span style="color: #000000;">)</span>
+</code></pre>
+</div>
+<p>
+This is dangerous because it can overwrite functions!
+</p></li>
+<li><code>from numpy import sqrt</code> if you only need one function</li>
+
+</ul></li>
+
+</ul>
+</section>
+<section id="slide-org194468f">
+<h3 id="org194468f"><span class="section-number-3">2.2.</span> Recommended</h3>
+<ul>
+<li><p>
+<code>import numpy as np</code> gives numpy a 'nickname'
+</p>
+<div class="org-src-container">
+
+<pre  class="src src-python"   ><code trim><span style="color: #531ab6;">import</span> numpy <span style="color: #531ab6;">as</span> np
+<span style="color: #8f0075;">print</span><span style="color: #000000;">(</span>np.sqrt<span style="color: #dd22dd;">(</span>100<span style="color: #dd22dd;">)</span><span style="color: #000000;">)</span>
+</code></pre>
+</div></li>
+<li>Gives you access to <code>numpy</code> without always having to type it out</li>
+<li>While not official, <i>most people</i> <code>import numpy as np</code></li>
+
+</ul>
+</section>
+<section id="slide-org6a2b570">
+<h3 id="org6a2b570"><span class="section-number-3">2.3.</span> Introduction to <code>numpy</code> arrays</h3>
+<ul>
+<li>So far we've just been overwriting data as we go through</li>
+<li>What if we want to store everything</li>
+<li><p>
+<b>Do not want</b>
+</p>
+<div class="org-src-container">
+
+<pre  class="src src-python"   ><code trim><span style="color: #005e8b;">f1</span> <span style="color: #000000;">=</span> 1.25
+<span style="color: #005e8b;">f2</span> <span style="color: #000000;">=</span> 1.29
+...
+</code></pre>
+</div></li>
+<li><p>
+We can store data in arrays, and I recommend <i>always</i> use <code>numpy</code> arrays
+</p>
+<div class="org-src-container">
+
+<pre  class="src src-python"   ><code trim><span style="color: #531ab6;">import</span> numpy <span style="color: #531ab6;">as</span> np
+
+<span style="color: #005e8b;">position</span> <span style="color: #000000;">=</span> np.array<span style="color: #000000;">(</span><span style="color: #dd22dd;">[</span>0, 0.1, 0.2, 50.7, 50.8<span style="color: #dd22dd;">]</span><span style="color: #000000;">)</span>
+<span style="color: #005e8b;">force</span> <span style="color: #000000;">=</span> np.array<span style="color: #000000;">(</span><span style="color: #dd22dd;">[</span>1.25, 1.29, 1.35, 2.76, 2.76<span style="color: #dd22dd;">]</span><span style="color: #000000;">)</span>
+
+<span style="color: #8f0075;">print</span><span style="color: #000000;">(</span>position<span style="color: #000000;">)</span>
+<span style="color: #8f0075;">print</span><span style="color: #000000;">(</span>force<span style="color: #dd22dd;">[</span>2<span style="color: #dd22dd;">]</span><span style="color: #000000;">)</span>
+<span style="color: #8f0075;">print</span><span style="color: #000000;">(</span><span style="color: #8f0075;">type</span><span style="color: #dd22dd;">(</span>force<span style="color: #dd22dd;">)</span><span style="color: #000000;">)</span>
+</code></pre>
+</div>
+
+<pre class="example">
+[ 0.   0.1  0.2 50.7 50.8]
+1.35
+&lt;class 'numpy.ndarray'&gt;
+</pre>
+
+<p>
+(is this what you expected for <code>force[2]</code>?)
+</p></li>
+
+</ul>
+</section>
+<section id="slide-org68146dc">
+<h3 id="org68146dc"><span class="section-number-3">2.4.</span> Some other ways to grab stuff from arrays</h3>
+<div class="org-src-container">
+
+<pre  class="src src-python"   ><code trim><span style="color: #005e8b;">x</span> <span style="color: #000000;">=</span> <span style="color: #000000;">[</span>10, 20, 40, 80, 120<span style="color: #000000;">]</span>
+<span style="color: #8f0075;">print</span><span style="color: #000000;">(</span>x<span style="color: #dd22dd;">[</span>1<span style="color: #dd22dd;">]</span><span style="color: #000000;">)</span>          <span style="color: #595959;"># </span><span style="color: #595959;">the 2nd box, since counting starts at 0</span>
+<span style="color: #8f0075;">print</span><span style="color: #000000;">(</span>x<span style="color: #dd22dd;">[</span>1:3<span style="color: #dd22dd;">]</span><span style="color: #000000;">)</span>        <span style="color: #595959;"># </span><span style="color: #595959;">includes the start, excludes the end</span>
+<span style="color: #8f0075;">print</span><span style="color: #000000;">(</span>x<span style="color: #dd22dd;">[</span><span style="color: #000000;">-</span>1<span style="color: #dd22dd;">]</span><span style="color: #000000;">)</span>         <span style="color: #595959;"># </span><span style="color: #595959;">1 back from the end</span>
+<span style="color: #8f0075;">print</span><span style="color: #000000;">(</span>x<span style="color: #dd22dd;">[</span><span style="color: #000000;">-</span>3:<span style="color: #000000;">-</span>1<span style="color: #dd22dd;">]</span><span style="color: #000000;">)</span>      <span style="color: #595959;"># </span><span style="color: #595959;">can you predict the output?</span>
+<span style="color: #8f0075;">print</span><span style="color: #000000;">(</span>x<span style="color: #dd22dd;">[</span>0:<span style="color: #8f0075;">len</span><span style="color: #008899;">(</span>x<span style="color: #008899;">)</span>:2<span style="color: #dd22dd;">]</span><span style="color: #000000;">)</span> <span style="color: #595959;"># </span><span style="color: #595959;">can you predict the output?</span>
+<span style="color: #8f0075;">print</span><span style="color: #000000;">(</span>x<span style="color: #dd22dd;">[</span>::2<span style="color: #dd22dd;">]</span><span style="color: #000000;">)</span>        <span style="color: #595959;"># </span><span style="color: #595959;">shortcut!</span>
+</code></pre>
+</div>
+</section>
+<section id="slide-orgac3da2a">
+<h3 id="orgac3da2a"><span class="section-number-3">2.5.</span> Work done by pulling</h3>
+<ul>
+<li><p>
+What might a for/while loop look like to compute work done from 3 m to 67 m?
+</p>
+
+<div id="org7679dc6" class="figure">
+<p><img src="02figs/ForceVsTime.png" alt="ForceVsTime.png" align="right" width="50%" />
+</p>
+</div></li>
+<li>Split problem into small chunks</li>
+<li>Find work done for each chunk</li>
+<li>Add them together</li>
+<li>Now that we can store the data in arrays, we just need to figure
+out how to repeat the calculation many times</li>
+
+</ul>
+</section>
+</section>
+<section>
+<section id="slide-org40a107d">
+<h2 id="org40a107d"><span class="section-number-2">3.</span> Working with arrays</h2>
+<p>
+Put aside the previous example of work done for now. We need to
+practice working with arrays of data
+</p>
+
+<p>
+We have two tools that we still need to make this easier
+</p>
+<ol>
+<li>A quick way to make an array (of times, for example)</li>
+<li>Some way to repeat a calculation but with different inputs</li>
+
+</ol>
+</section>
+<section id="slide-orgac1910f">
+<h3 id="orgac1910f"><span class="section-number-3">3.1.</span> Numpy <code>arange</code> and <code>linspace</code></h3>
+<p>
+These will be workhorses for this entire class
+</p>
+<ul>
+<li><code>np.arange</code>
+<ul>
+<li><p>
+like <code>range</code>, but returns an array
+</p>
+<div class="org-src-container">
+
+<pre  class="src src-python"   ><code trim><span style="color: #531ab6;">import</span> numpy <span style="color: #531ab6;">as</span> np
+<span style="color: #005e8b;">t</span> <span style="color: #000000;">=</span> np.arange<span style="color: #000000;">(</span>5<span style="color: #000000;">)</span>
+<span style="color: #8f0075;">print</span><span style="color: #000000;">(</span>t<span style="color: #000000;">)</span>
+</code></pre>
+</div>
+
+<pre class="example">
+[0 1 2 3 4]
+</pre></li>
+<li>Still behaves like range (starts at 0, ends at less than maximum)</li>
+<li><p>
+Also works with small steps
+</p>
+<div class="org-src-container">
+
+<pre  class="src src-python"   ><code trim><span style="color: #005e8b;">t</span> <span style="color: #000000;">=</span> np.arange<span style="color: #000000;">(</span>0, 7, 0.1<span style="color: #000000;">)</span>
+<span style="color: #8f0075;">print</span><span style="color: #000000;">(</span>t<span style="color: #000000;">)</span>
+</code></pre>
+</div>
+
+<pre class="example">
+[0.  0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1.  1.1 1.2 1.3 1.4 1.5 1.6 1.7
+ 1.8 1.9 2.  2.1 2.2 2.3 2.4 2.5 2.6 2.7 2.8 2.9 3.  3.1 3.2 3.3 3.4 3.5
+ 3.6 3.7 3.8 3.9 4.  4.1 4.2 4.3 4.4 4.5 4.6 4.7 4.8 4.9 5.  5.1 5.2 5.3
+ 5.4 5.5 5.6 5.7 5.8 5.9 6.  6.1 6.2 6.3 6.4 6.5 6.6 6.7 6.8 6.9]
+</pre></li>
+
+</ul></li>
+
+</ul>
+</section>
+<section id="slide-orgf9e391b">
+<h3 id="orgf9e391b"><span class="section-number-3">3.2.</span> Numpy <code>arange</code> and <code>linspace</code></h3>
+<ul>
+<li><code>linspace</code> returns equally spaced numbers
+<ul>
+<li><p>
+Sometimes you know the start and end, and just want to break it
+into chunks
+</p>
+<div class="org-src-container">
+
+<pre  class="src src-python"   ><code trim><span style="color: #005e8b;">x</span> <span style="color: #000000;">=</span> np.linspace<span style="color: #000000;">(</span>0,10,20<span style="color: #000000;">)</span>
+<span style="color: #8f0075;">print</span><span style="color: #000000;">(</span>x<span style="color: #000000;">)</span>
+</code></pre>
+</div>
+
+<pre class="example">
+[ 0.          0.52631579  1.05263158  1.57894737  2.10526316  2.63157895
+  3.15789474  3.68421053  4.21052632  4.73684211  5.26315789  5.78947368
+  6.31578947  6.84210526  7.36842105  7.89473684  8.42105263  8.94736842
+  9.47368421 10.        ]
+</pre></li>
+
+<li>Note: <code>np.linspace</code> is <i>inclusive</i> of the beginning and end</li>
+
+<li><p>
+Some practice with accessing:
+</p>
+<div class="org-src-container">
+
+<pre  class="src src-python"   ><code trim><span style="color: #8f0075;">print</span><span style="color: #000000;">(</span><span style="color: #3548cf;">"Just the first 10 elements: "</span>, x<span style="color: #dd22dd;">[</span>:10<span style="color: #dd22dd;">]</span><span style="color: #000000;">)</span>
+<span style="color: #8f0075;">print</span><span style="color: #000000;">(</span><span style="color: #3548cf;">"the last 10 elements:       "</span>, x<span style="color: #dd22dd;">[</span><span style="color: #000000;">-</span>10:<span style="color: #dd22dd;">]</span><span style="color: #000000;">)</span>
+</code></pre>
+</div></li>
+
+</ul></li>
+
+</ul>
+</section>
+<section id="slide-orgb780819">
+<h3 id="orgb780819"><span class="section-number-3">3.3.</span> Repeating an operation on each element in an array</h3>
+<p>
+Position of a simple harmonic operator:
+</p>
+<div>
+\begin{equation}
+\scriptstyle x(t) = x_0 \cos(2\pi t/T)
+\end{equation}
+
+</div>
+<ol>
+<li><p>
+Make an array of times from 0 to 7 seconds
+</p>
+<div class="org-src-container">
+
+<pre  class="src src-python"   ><code trim><span style="color: #005e8b;">t</span> <span style="color: #000000;">=</span> np.linspace<span style="color: #000000;">(</span>0, 7, 1000<span style="color: #000000;">)</span>
+</code></pre>
+</div></li>
+<li>Now calculate the position.
+<ul>
+<li>If you feed an array into a <code>numpy</code> calculation, it does everything for you</li>
+<li><p>
+This is called <i>vectorized</i>
+</p>
+<div class="org-src-container">
+
+<pre  class="src src-python"   ><code trim><span style="color: #005e8b;">x0</span> <span style="color: #000000;">=</span> 5
+<span style="color: #005e8b;">T</span> <span style="color: #000000;">=</span> 3
+<span style="color: #005e8b;">x</span> <span style="color: #000000;">=</span> x0 <span style="color: #000000;">*</span> np.cos<span style="color: #000000;">(</span>2 <span style="color: #000000;">*</span> np.pi <span style="color: #000000;">*</span> t <span style="color: #000000;">/</span> T<span style="color: #000000;">)</span>
+</code></pre>
+</div></li>
+<li><p>
+Let's check
+</p>
+<div class="org-src-container">
+
+<pre  class="src src-python"   ><code trim><span style="color: #8f0075;">print</span><span style="color: #000000;">(</span><span style="color: #3548cf;">"The first 10 elements, x = "</span>, x<span style="color: #dd22dd;">[</span>:10<span style="color: #dd22dd;">]</span><span style="color: #000000;">)</span>
+</code></pre>
+</div>
+
+<pre class="example">
+The first 10 elements, x =  [5.         4.99946159 4.99784647 4.99515499 4.99138773 4.9865455
+ 4.98062935 4.97364054 4.96558059 4.95645123]
+</pre></li>
+
+</ul></li>
+
+</ol>
+</section>
+<section id="slide-org7f3eb2f">
+<h3 id="org7f3eb2f"><span class="section-number-3">3.4.</span> Functions are reusable code</h3>
+<p>
+Any time you want to repeat a task over and over, streamline!
+</p>
+<ul>
+<li>Inputs and outputs are predefined (e.g., input time, output position)
+<ul>
+<li>e.g. <code>np.cos()</code> <i>input</i> is angle in radians, <i>output</i> is cosine</li>
+
+</ul></li>
+<li><p>
+Simple function
+</p>
+<div class="org-src-container">
+
+<pre  class="src src-python"   ><code trim><span style="color: #531ab6;">def</span> <span style="color: #721045;">myfirstfunction</span><span style="color: #000000;">(</span>aword<span style="color: #000000;">)</span>:
+    <span style="color: #8f0075;">print</span><span style="color: #000000;">(</span><span style="color: #3548cf;">"The word is "</span>, aword<span style="color: #000000;">)</span>
+</code></pre>
+</div>
+<ul>
+<li>The indentation is important!</li>
+<li>Try this!</li>
+
+</ul></li>
+<li><p>
+Add 7 to an integer
+</p>
+<div class="org-src-container">
+
+<pre  class="src src-python"   ><code trim><span style="color: #531ab6;">def</span> <span style="color: #721045;">addSeven</span><span style="color: #000000;">(</span>number<span style="color: #000000;">)</span>:
+    <span style="color: #531ab6;">return</span> number<span style="color: #000000;">+</span>7
+</code></pre>
+</div></li>
+<li><p>
+Try it!
+</p>
+<div class="org-src-container">
+
+<pre  class="src src-python"   ><code trim><span style="color: #005e8b;">newnumber</span> <span style="color: #000000;">=</span> addSeven<span style="color: #000000;">(</span>4<span style="color: #000000;">)</span>
+<span style="color: #8f0075;">print</span><span style="color: #000000;">(</span>newnumber<span style="color: #000000;">)</span>
+</code></pre>
+</div>
+
+<pre class="example">
+11
+</pre></li>
+<li><p>
+Try with a numpy array
+</p>
+<div class="org-src-container">
+
+<pre  class="src src-python"   ><code trim><span style="color: #005e8b;">newarray</span> <span style="color: #000000;">=</span> addSeven<span style="color: #000000;">(</span>np.array<span style="color: #dd22dd;">(</span><span style="color: #008899;">[</span>1,2,3,4,10<span style="color: #008899;">]</span><span style="color: #dd22dd;">)</span><span style="color: #000000;">)</span>
+<span style="color: #8f0075;">print</span><span style="color: #000000;">(</span>newarray<span style="color: #000000;">)</span>
+</code></pre>
+</div>
+
+<pre class="example">
+[ 8  9 10 11 17]
+</pre></li>
+
+</ul>
+</section>
+<section id="slide-org44fdb42">
+<h3 id="org44fdb42"><span class="section-number-3">3.5.</span> Plotting these things</h3>
+<p>
+It's always useful to plot the results
+</p>
+
+<div class="column" style="float:left; width:50%">
+<div class="org-src-container">
+
+<pre  class="src src-python" id="makeplot"  ><code trim><span style="color: #531ab6;">import</span> matplotlib.pyplot <span style="color: #531ab6;">as</span> plt
+<span style="color: #531ab6;">import</span> numpy <span style="color: #531ab6;">as</span> np
+
+<span style="color: #595959;">## </span><span style="color: #595959;">Initial parameters</span>
+<span style="color: #005e8b;">x0</span> <span style="color: #000000;">=</span> 5
+<span style="color: #005e8b;">T</span> <span style="color: #000000;">=</span> 3
+
+<span style="color: #595959;">## </span><span style="color: #595959;">Calculate the arrays of t and x</span>
+<span style="color: #005e8b;">t</span> <span style="color: #000000;">=</span> np.linspace<span style="color: #000000;">(</span>0, 7, 1000<span style="color: #000000;">)</span>
+<span style="color: #005e8b;">x</span> <span style="color: #000000;">=</span> x0 <span style="color: #000000;">*</span> np.cos<span style="color: #000000;">(</span>2 <span style="color: #000000;">*</span> np.pi <span style="color: #000000;">*</span> t <span style="color: #000000;">/</span> T<span style="color: #000000;">)</span>
+
+<span style="color: #595959;">## </span><span style="color: #595959;">plot them</span>
+plt.plot<span style="color: #000000;">(</span>t,x<span style="color: #000000;">)</span>
+<span style="color: #595959;">##</span><span style="color: #595959;">plt.show()</span>
+</code></pre>
+</div>
+</div>
+<div class="column" style="float:right; width:50%">
+
+<div id="org2339536" class="figure">
+<p><img src="02figs/SHO.png" alt="SHO.png" />
+</p>
+</div>
+
+</div>
+</section>
+</section>
+</div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.js"></script>
+
+<script>
+// Full list of configuration options available here:
+// https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+width:1200, height:800, controlsLayout: 'edges', transition:'fade', slideNumber:'c/t', center:false, progress:'true', history:'true', controls:'true', overview:'true',
+
+// Optional libraries used to extend on reveal.js
+dependencies: [
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }]
+
+});
+
+</script>
+</body>
+</html>
