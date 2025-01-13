@@ -6,6 +6,7 @@ handle:
 email: bmstric4@ncsu.edu
 scholar: 
 calendar:
+alumni: true
 image: /assets/images/team/briana-strickland-square.jpg
 github: 
 cv:
