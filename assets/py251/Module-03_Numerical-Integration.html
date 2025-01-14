@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Module 03 - Integration</title>
+<meta name="author" content="Dr. Longland"/>
+<meta name="description" content=""/>
+<meta name="keywords" content=""/>
+<style type="text/css">
+.underline { text-decoration: underline; }
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.css"/>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/theme/white.css" id="theme"/>
+
+<link rel="stylesheet" href="./presentation.css"/>
+
+<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+<script>
+    if( window.location.search.match( /print-pdf/gi ) ) {
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = 'https://cdn.jsdelivr.net/npm/reveal.js/css/print/pdf.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+    }
+</script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+<section id="sec-title-slide"><h1 class="title">Module 03 - Integration</h1><p class="subtitle"></p>
+<h2 class="author">Dr. Longland</h2>
+</section>
+<section>
+<section id="slide-orgbafc78c">
+<h2 id="orgbafc78c"><span class="section-number-2">1.</span> The problem</h2>
+<ul>
+<li>Calculate work done in moving cart along track</li>
+<li><p>
+We will split this into small boxes and calculate the individual \(W_i\)
+</p>
+<div class="r-stack">
+
+<div id="orga8f40d4" class="figure">
+<p><img src="03figs/ForceVsTime.png" alt="ForceVsTime.png" width="70%" />
+</p>
+</div>
+
+<div id="org5fa7051" class="figure">
+<p><img src="03figs/ForceVsTime2.png" alt="ForceVsTime2.png" class="fragment fade-in" width="70%" />
+</p>
+</div>
+</div></li>
+
+</ul>
+</section>
+</section>
+<section>
+<section id="slide-org9f927d3">
+<h2 id="org9f927d3"><span class="section-number-2">2.</span> Zoom in to investigate methods</h2>
+<ul>
+<li>To integrate this, we will first split the curve into small
+rectangular chunks</li>
+<li><p>
+We'll find the area of each chunk
+</p>
+<div class="r-stack">
+
+<div id="org75f3282" class="figure">
+<p><img src="03figs/SquareCurve01.png" alt="SquareCurve01.png" />
+</p>
+</div>
+
+<div id="org4c0860c" class="figure">
+<p><img src="03figs/SquareCurve02.png" alt="SquareCurve02.png" class="fragment fade-in" />
+</p>
+</div>
+
+<div id="org5a04bd6" class="figure">
+<p><img src="03figs/SquareCurve03.png" alt="SquareCurve03.png" class="fragment fade-in" />
+</p>
+</div>
+
+<div id="org815ca50" class="figure">
+<p><img src="03figs/SquareCurve04.png" alt="SquareCurve04.png" class="fragment fade-in" />
+</p>
+</div>
+
+<div id="orge7c25e9" class="figure">
+<p><img src="03figs/SquareCurve05.png" alt="SquareCurve05.png" class="fragment fade-in" />
+</p>
+</div>
+</div></li>
+
+</ul>
+</section>
+</section>
+<section>
+<section id="slide-org79b2c06">
+<h2 id="org79b2c06"><span class="section-number-2">3.</span> For more information</h2>
+<ul>
+<li>Check out this <a href="https://youtu.be/rfG8ce4nNh0">3Blue1Brown video</a></li>
+<li>Read <a href="https://catalog.lib.ncsu.edu/catalog/NCSU4441969">TAK</a> chapter 3.3 up to P. 53.</li>
+
+</ul>
+</section>
+</section>
+<section>
+<section id="slide-org921942d">
+<h2 id="org921942d"><span class="section-number-2">4.</span> In class</h2>
+<p>
+You'll build a function to do this left-point integration. Then
+you'll check its accuracy.
+</p>
+<div class="org-src-container">
+
+<pre  class="src src-python"   ><code trim><span style="color: #531ab6;">def</span> <span style="color: #721045;">leftpoint</span><span style="color: #000000;">(</span>f, a, b, N<span style="color: #000000;">)</span>:
+    <span style="color: #005e8b;">h</span> <span style="color: #000000;">=</span> ...
+
+    <span style="color: #005e8b;">mysum</span> <span style="color: #000000;">=</span> ...
+
+    <span style="color: #531ab6;">return</span> mysum
+
+<span style="color: #005e8b;">result</span> <span style="color: #000000;">=</span> leftpoint<span style="color: #000000;">(</span>np.sin, 0, np.pi<span style="color: #000000;">/</span>2, N<span style="color: #000000;">)</span>
+<span style="color: #8f0075;">print</span><span style="color: #000000;">(</span><span style="color: #3548cf;">"The result of the integral is "</span>, result<span style="color: #000000;">)</span>
+</code></pre>
+</div>
+</section>
+</section>
+</div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.js"></script>
+
+<script>
+// Full list of configuration options available here:
+// https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+width:1200, height:800, controlsLayout: 'edges', transition:'fade', slideNumber:'c/t', center:false, progress:'true', history:'true', controls:'true', overview:'true',
+
+// Optional libraries used to extend on reveal.js
+dependencies: [
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }]
+
+});
+
+</script>
+</body>
+</html>
