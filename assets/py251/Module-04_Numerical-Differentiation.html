@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Module 04 - Differentiation</title>
+<meta name="author" content="Dr. Longland"/>
+<meta name="description" content=""/>
+<meta name="keywords" content=""/>
+<style type="text/css">
+.underline { text-decoration: underline; }
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.css"/>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/theme/white.css" id="theme"/>
+
+<link rel="stylesheet" href="./presentation.css"/>
+
+<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+<script>
+    if( window.location.search.match( /print-pdf/gi ) ) {
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = 'https://cdn.jsdelivr.net/npm/reveal.js/css/print/pdf.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+    }
+</script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+<section id="sec-title-slide"><h1 class="title">Module 04 - Differentiation</h1><p class="subtitle"></p>
+<h2 class="author">Dr. Longland</h2>
+</section>
+<section>
+<section id="slide-orgfe0252e">
+<h2 id="orgfe0252e"><span class="section-number-2">1.</span> Numerical differentiation</h2>
+<div style="display: grid; grid-template-columns: auto auto;">
+
+<div id="orge78edaf" class="figure">
+<p><img src="04figs/Differentiation.png" alt="Differentiation.png" width="100%" />
+</p>
+</div>
+<ul>
+<li><p>
+Take definition of differentiation
+</p>
+<div>
+\begin{equation}
+f'(x_0) = \lim\limits_{h\to 0}\frac{f(x_0+h) - f(x_0)}{h}
+\end{equation}
+
+</div></li>
+<li><p>
+Approximate by small h
+</p>
+<div>
+\begin{equation}
+f'(x_0) \approx \frac{f(x_0+h) - f(x_0)}{h}
+\end{equation}
+
+</div></li>
+
+</ul>
+</div>
+<ul>
+<li>This picture is <i>"forward differentiation"</i></li>
+
+</ul>
+</section>
+</section>
+<section>
+<section id="slide-orgf933d9e">
+<h2 id="orgf933d9e"><span class="section-number-2">2.</span> Theoretical accuracy of algorithm</h2>
+<ul>
+<li><p>
+Without getting into the derivation
+</p>
+
+<div id="orga7138b1" class="figure">
+<p><img src="04figs/Accuracy.png" alt="Accuracy.png" width="50%" />
+</p>
+</div></li>
+<li>If h is too large, the slope is wrong: <i>"numerical error"</i></li>
+<li>If h is too small, subtracting small numbers creates <i>"numerical precision error"</i></li>
+
+</ul>
+</section>
+</section>
+<section>
+<section id="slide-org2e0d961">
+<h2 id="org2e0d961"><span class="section-number-2">3.</span> Measuring numerical error</h2>
+<ul>
+<li><p>
+Theoretically you can derive error
+</p>
+<div>
+\begin{equation}
+\epsilon \propto h^n
+\end{equation}
+
+</div></li>
+<li>How can we measure \(n\)?</li>
+
+</ul>
+</section>
+</section>
+</div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.js"></script>
+
+<script>
+// Full list of configuration options available here:
+// https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+width:1200, height:800, controlsLayout: 'edges', transition:'fade', slideNumber:'c/t', center:false, progress:'true', history:'true', controls:'true', overview:'true',
+
+// Optional libraries used to extend on reveal.js
+dependencies: [
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }]
+
+});
+
+</script>
+</body>
+</html>
