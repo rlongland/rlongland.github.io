@@ -1,0 +1,32 @@
+.reveal h1 {
+    font-family: Yanone Kaffeesatz;
+		font-size: 200%;
+    text-transform: none;
+}
+
+.reveal h2 {
+    font-family: Yanone Kaffeesatz;
+		font-size: 150%;
+    text-transform: none;
+}
+
+.reveal h3 {
+    font-family: Yanone Kaffeesatz;
+		font-size: 120%;
+    text-transform: none;
+}
+
+.reveal li {
+				font-size: 80%;
+}
+.reveal p {
+				font-size: 100%;
+}
+
+.reveal code {
+        color: darkred;
+}
+
+.reveal table {
+    font-size: 70%;
+}
