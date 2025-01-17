@@ -11,6 +11,7 @@
 
 * The Goal
   - Kaixin's Data
+    #+attr_html: :width 60%
     [[file:figs/Spec-21deg.png]]
   - Goal is to extract spectroscopic information on all states populated in \nbsp{}^{24}Mg through the \(^{23}\)Na(^{3}He,d) proton transfer reaction.
   
@@ -72,6 +73,7 @@
    3) (from nearby peaks, know *width \pm uncertainty*)
    4) Feed these in as /prior knowledge/ in Bayesian fit
 * Final result
+  #+attr_html: :width 50%
   [[file:figs/Spec-fitted-double-21deg.png]]
   #+begin_src org
   Peak 1 Position = Channel 1852.44 +/- 0.38
