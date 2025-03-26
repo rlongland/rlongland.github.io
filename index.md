@@ -10,7 +10,7 @@ header:
       url: "mailto:richard_longland@ncsu.edu"
 excerpt: "Longland Group"
 intro: 
-   - excerpt: "The Longland research group is committed to diversity and equality. A diverse set of experiences across race, gender, age, religion, and identity helps us unlock the mysteries of the universe in new and unique ways!"
+   - excerpt: "The Longland research group is committed to fostering a welcoming and supportive environment to everyone we work with. Only by working together can we unlock the mysteries of the universe in new and unique ways!"
 feature_row:
   - image_path: assets/images/EngeView1-feature.png
     alt: "Enge CAD Drawing"
