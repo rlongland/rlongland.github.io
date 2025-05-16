@@ -1,7 +1,7 @@
 ---
 layout: single
 title: Maahi Naik
-position: Undergraduate Student
+position: Undergraduate Researcher
 handle: 
 email: msnaik@ncsu.edu
 alumni: false
