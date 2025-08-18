@@ -102,7 +102,7 @@ classes: narrow
 <!-- 	    <img src="/assets/images/team/richard-longland.jpg" width="100" alt="Richard" class="img-responsive thumbnail"> -->
 <!-- 	    <div> -->
 <!--             <H3>Professor Richard Longland   -->
-<!--             <small>Assistant Professor</small></H3> -->
+<!--             <small>Professor</small></H3> -->
 <!--         </div> -->
 <!--         </div> -->
 <!--         </div> -->

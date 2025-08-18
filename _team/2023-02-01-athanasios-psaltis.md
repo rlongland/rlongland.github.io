@@ -9,6 +9,7 @@ calendar:
 image: /assets/images/team/thanassis-psaltis.png
 github: 
 cv:
+alumni: true
 sidekick: true
 
 ---
