@@ -10,10 +10,10 @@ header:
     actions:
       - label: "See more here"
         url: "https://www.lib.ncsu.edu/events/fall-sidewalk-symposium"
-excerpt: "Undergraduate student, Maahi Naik, presented her research at the College of Science's Fall Sidewalk Symposium"
+excerpt: "Undergraduate student, Maahi Naik, presented her research at the NCSU Sidewalk Symposium"
 ---
 
-Undergraduate student, Maahi Naik, presented her work at the NCSU College of Sciences "Sidewalk Symposium" last week! She presented her work in developing a segmented silicon detector system that will be critical to measuring key nuclear reaction cross sections for understanding nitrogen production in supernovae. 
+Undergraduate student, Maahi Naik, presented her work at the NCSU library's "Sidewalk Symposium" last week! She presented her work in developing a segmented silicon detector system that will be critical to measuring key nuclear reaction cross sections for understanding nitrogen production in supernovae. 
 
 <figure>
 	<img src="/assets/images/news/SidewalkPoster.JPG" style="width:512px;">
