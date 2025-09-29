@@ -1,7 +1,7 @@
 ---
 layout: single
 title:  "Maahi Naik's Sidewalk Symposium Poster"
-date:   2025-09-29
+date:   2025-09-25
 categories: presentations
 header:
     overlay_image: /assets/images/SidewalkPoster.JPG
