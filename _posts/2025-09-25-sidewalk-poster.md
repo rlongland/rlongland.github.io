@@ -4,9 +4,9 @@ title:  "Maahi Naik's Sidewalk Symposium Poster"
 date:   2025-09-25
 categories: presentations
 header:
-    overlay_image: /assets/images/SidewalkPoster-cropped.JPG
+    overlay_image: /assets/images/SidewalkPoster-cropped.jpg
     overlay_filter: 0.6
-    teaser: /assets/images/news/SidewalkPoster.JPG
+    teaser: /assets/images/news/SidewalkPoster-cropped.jpg
     actions:
       - label: "See more here"
         url: "https://www.lib.ncsu.edu/events/fall-sidewalk-symposium"
