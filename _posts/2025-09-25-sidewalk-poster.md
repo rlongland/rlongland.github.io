@@ -4,7 +4,7 @@ title:  "Maahi Naik's Sidewalk Symposium Poster"
 date:   2025-09-25
 categories: presentations
 header:
-    overlay_image: /assets/images/SidewalkPoster.JPG
+    overlay_image: /assets/images/SidewalkPoster-cropped.JPG
     overlay_filter: 0.6
     teaser: /assets/images/news/SidewalkPoster.JPG
     actions:
