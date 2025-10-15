@@ -43,7 +43,7 @@ search: true
 author:
   name     : "Dr. Richard Longland"
   avatar   : "/assets/images/Richard-Square.JPG"
-  bio      : "Professor of Physics."
+  bio      : "Professor of Physics and Astronomy"
   location : "North Carolina, USA"
 #  github: rlongland #username
 #  orcid: 0000-0001-7731-580X # ID Number (ex. 0000-0000-0000-0000)
