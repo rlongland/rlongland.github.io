@@ -12,12 +12,12 @@ excerpt: "Graduate student, Victor Beaty, won a presentation award for his poste
 
 Graduate student, Victor Beaty, attended the NSBP-NSHP joint annual conference, "Beyond Boundaries: Physics for the Future of Workforce & Research Development (P-FORWARD)". He presented his work in developing implantation methods for high-purity neon targets for measuring the $^{20}$Ne(d,p)$^{21}$Ne reaction, which is planned as one of our flagship experiments with the new tandem injector system.
 
+Victor's poster presentation won the presentation award for his work. Congratulations! This recognition is well-deserved!
+
 <figure>
 	<img src="/assets/images/news/Beaty-PosterAward.png" style="width:612px;">
 	<figcaption>Victor with his award!</figcaption>
 </figure>
-
-Congratulations to Victor! This recognition was well-deserved!
 
 <figure>
     <a href="/assets/images/news/20Ne-dp_Poster.pdf"><img src="/assets/images/news/Beaty-Poster.png" style="width:612px;"></a>
