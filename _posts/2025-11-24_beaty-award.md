@@ -1,7 +1,7 @@
 ---
 layout: single
 title:  "Victor Beaty wins presentation award for his poster at the NSBP-NSHP conference"
-date:   2025-11-25
+date:   2025-11-24
 categories: presentations
 header:
     overlay_image: /assets/images/news/Beaty-Poster-Cropped.png
